@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import CustomName from "../CustomName";
 
 const Hero = () => {
   return (
@@ -15,9 +16,12 @@ const Hero = () => {
           className="rounded-full object-center object-fit"
         />
       </div>
-      <h1 className="mt-5 font-semibold text-left text-lg  md:text-2xl lg:text-4xl leading-snug tracking-wider">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae,
-        consequatur quaerat.
+      <h1 className="mt-5 text-pretty text-left text-lg  md:text-2xl lg:text-4xl leading-snug tracking-wider">
+        Hello, I'm <CustomName name="DA GU GU GU" />, a{" "}
+        <span className="underline  decoration-yellow-500">Javascript</span>{" "}
+        Developer with{" "}
+        <span className="underline  decoration-sky-500">2 Years</span> of
+        experience in crafting exceptional user interfaces.
       </h1>
     </div>
   );

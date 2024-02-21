@@ -14,16 +14,17 @@ const ProjectCard = () => {
             Title
           </p>
           <p className="font-bold w-[100px]  border-l h-full flex items-center justify-center">
-            aa
+            01
           </p>
         </div>
         {/* middle part */}
 
         <div className="flex w-full  items-center border">
-          <p className="font-bold tracking-wider w-[100px] rotate-90  h-full flex items-center justify-center">
-            01
-          </p>
-          <div className="w-full h-[290px] rounded relative bg-red-500">
+          <div className="font-bold -rotate-90  h-full w-[100px]  tracking-wider  flex items-center justify-center">
+            WebSite
+          </div>
+
+          <div className="w-full flex-grow h-[290px] rounded relative ">
             <Image
               src={
                 "https://www.freecodecamp.org/news/content/images/size/w60/2022/03/deee.jpg"
@@ -32,8 +33,9 @@ const ProjectCard = () => {
               layout="fill"
             />
           </div>
-          <p className="font-bold w-[100px]  -rotate-90 h-full flex items-center justify-center">
-            01
+
+          <p className="font-bold w-[100px]  rotate-90 h-full flex items-center justify-center">
+            Website
           </p>
         </div>
         <div className="flex w-full  items-center h-[60px] border">
@@ -44,7 +46,7 @@ const ProjectCard = () => {
             View Detail
           </h4>
           <p className="font-bold w-[100px]  border-l h-full flex items-center justify-center">
-            aa
+            01
           </p>
         </div>
       </div>
