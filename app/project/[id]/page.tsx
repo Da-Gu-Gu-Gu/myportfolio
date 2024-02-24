@@ -1,5 +1,10 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+// import data from "../../assets/lottie/Showreel_-Mobile-screens-[remix].json";
+// import data from "../../assets/lottie/Animated-iPhone-mockup-[remix].json";
+import data from "../../assets/lottie/Animated-web-screens-[remix].json";
+import Lottie from "react-lottie";
 //overview
 //Role
 //detail
@@ -47,15 +52,25 @@ const page = () => {
           eum amet consectetur adipisicing elit. Consectetur eum amet !
         </p>
       </div>
-      <div className="w-full mb-10 h-[300px] md:h-[400px] lg:h-[500px] border rounded-lg relative ">
-        <Image
+      {/* <div className="w-full mb-10 h-[300px] md:h-[400px] lg:h-[500px] border rounded-lg  "> */}
+      <Lottie
+        options={{
+          animationData: data,
+          loop: true,
+        }}
+
+        // width={"100%"}
+        // height={290}
+      />
+
+      {/* <Image
           src="/next.svg"
           className="border "
           layout="fill"
           objectFit="contain"
           alt="profile"
-        />
-      </div>
+        /> */}
+      {/* </div> */}
       <div className="mb-10">
         <h2 className="font-semibold text-lg">Role</h2>
         <ul className="list-disc pl-7 mt-3">

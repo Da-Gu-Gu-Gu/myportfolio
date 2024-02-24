@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from "react";
-
+import Flower from "./assets/svg/Flower";
 const CustomName = ({ name }: { name: string }) => {
   const url = "./flower.svg";
   // "https://www.svgrepo.com/show/69415/floral-design-with-thin-spirals-and-little-flowers-couple.svg";
@@ -18,6 +18,9 @@ const CustomName = ({ name }: { name: string }) => {
   return (
     <span ref={textRef} className="relative z-20 font-bold decoration-sky-500">
       {name}
+      {/* <div className="h-[90px] lg:h-[120px] w-full absolute left-0 -top-5 z-20">
+        <Flower />
+      </div> */}
       <img
         id="flowerImage"
         className="h-[90px] lg:h-[120px] w-full absolute left-0 -top-7 z-20"
