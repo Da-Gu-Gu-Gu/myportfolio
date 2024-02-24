@@ -17,7 +17,7 @@ const Hero = () => {
         />
       </div>
       <h1 className="mt-5 text-pretty text-left text-lg  md:text-2xl lg:text-4xl leading-snug tracking-wider">
-        Hello, I'm <CustomName name="DA GU GU GU" />, a
+        Hello, I am <CustomName name="DA GU GU GU" />, a
         <span className="underline  decoration-yellow-500">Javascript</span>{" "}
         Developer with
         <span className="underline  decoration-sky-500">2 Years</span> of
