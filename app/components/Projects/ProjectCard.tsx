@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Lottie from "react-lottie";
-import data from "../../assets/lottie/Showreel_-Mobile-screens-[remix].json";
-// import data from "../../assets/lottie/Animated-iPhone-mockup-[remix].json";
+// import data from "../../assets/lottie/Showreel_-Mobile-screens-[remix].json";
+import data from "../../assets/lottie/Animated-iPhone-mockup-[remix].json";
 const ProjectCard = () => {
   return (
     <Link href={"/project/1"}>
@@ -22,7 +22,7 @@ const ProjectCard = () => {
         </div>
         {/* middle part */}
 
-        <div className="flex w-full h-[290px] border">
+        <div className="flex w-full items-center border">
           {/* <div className="w-[100px] h-full bg-slate-600"> */}
           {/* </div> */}
           {/* <div className="w-[100px] bg-red-300 flex justify-center"> */}
@@ -31,7 +31,7 @@ const ProjectCard = () => {
               autoFill={true}
               className="w-full h-full bg-blue-300"
             > */}
-          <p className="font-bold w-[100px]  -rotate-90 h-full flex items-center justify-center">
+          <p className="font-bold w-[100px] hidden md:flex -rotate-90 h-full  items-center justify-center">
             Website
           </p>
           {/* </Marquee> */}
@@ -43,8 +43,9 @@ const ProjectCard = () => {
               animationData: data,
               loop: true,
             }}
-            width={"100%"}
-            height={290}
+
+            // width={"100%"}
+            // height={290}
           />
           {/* <Image
               src={
@@ -54,7 +55,7 @@ const ProjectCard = () => {
               layout="fill"
             /> */}
           {/* </div> */}
-          <p className="font-bold w-[100px]  rotate-90 h-full flex items-center justify-center">
+          <p className="font-bold hidden md:flex w-[100px]   rotate-90 h-full  items-center justify-center">
             Website
           </p>
         </div>

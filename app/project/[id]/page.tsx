@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-// import data from "../../assets/lottie/Showreel_-Mobile-screens-[remix].json";
+import data1 from "../../assets/lottie/Showreel_-Mobile-screens-[remix].json";
 // import data from "../../assets/lottie/Animated-iPhone-mockup-[remix].json";
-import data from "../../assets/lottie/Animated-web-screens-[remix].json";
+// import data from "../../assets/lottie/Animated-web-screens-[remix].json";
+import data from "../../assets/lottie/Animated-smartphones_-slider-[remix].json";
 import Lottie from "react-lottie";
 //overview
 //Role
@@ -62,7 +63,12 @@ const page = () => {
         // width={"100%"}
         // height={290}
       />
-
+      <Lottie
+        options={{
+          animationData: data1,
+          loop: true,
+        }}
+      />
       {/* <Image
           src="/next.svg"
           className="border "
