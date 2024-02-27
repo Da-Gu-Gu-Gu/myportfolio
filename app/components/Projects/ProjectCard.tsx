@@ -23,38 +23,18 @@ const ProjectCard = () => {
         {/* middle part */}
 
         <div className="flex w-full items-center border">
-          {/* <div className="w-[100px] h-full bg-slate-600"> */}
-          {/* </div> */}
-          {/* <div className="w-[100px] bg-red-300 flex justify-center"> */}
-          {/* <Marquee
-              direction="up"
-              autoFill={true}
-              className="w-full h-full bg-blue-300"
-            > */}
           <p className="font-bold w-[100px] hidden md:flex -rotate-90 h-full  items-center justify-center">
             Website
           </p>
-          {/* </Marquee> */}
-          {/* </div> */}
 
-          {/* <div className="w-full flex-grow h-[290px] rounded relative "> */}
-          <Lottie
-            options={{
-              animationData: data,
-              loop: true,
-            }}
-
-            // width={"100%"}
-            // height={290}
-          />
-          {/* <Image
-              src={
-                "https://www.freecodecamp.org/news/content/images/size/w60/2022/03/deee.jpg"
-              }
-              alt="Hero"
-              layout="fill"
-            /> */}
-          {/* </div> */}
+          <div className="w-full flex-grow h-[290px] rounded relative ">
+            <video height="290" loop autoPlay muted preload="none">
+              <source
+                src="./Animated-smartphones_-slider-[remix] (1).mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
           <p className="font-bold hidden md:flex w-[100px]   rotate-90 h-full  items-center justify-center">
             Website
           </p>
