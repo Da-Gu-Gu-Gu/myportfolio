@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import data1 from "../../assets/lottie/Showreel_-Mobile-screens-[remix].json";
-// import data from "../../assets/lottie/Animated-iPhone-mockup-[remix].json";
-// import data from "../../assets/lottie/Animated-web-screens-[remix].json";
+
 import data from "../../assets/lottie/Animated-smartphones_-slider-[remix].json";
 import Lottie from "react-lottie";
 //overview
@@ -16,10 +14,10 @@ const page = () => {
   return (
     <div className="w-full md:w-[90%] lg:w-full mx-auto px-5 lg:px-[120px]  my-10 ">
       <div className="flex gap-5 items-center">
-        <div className="w-[100px] h-[100px] border rounded-lg relative shadow-md">
+        <div className="w-[100px] h-[100px]  rounded-lg relative shadow-[0px_16px_30px_0px_#004770]">
           <Image
-            src="/next.svg"
-            className="border "
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/logos%2Fmatesat.webp?alt=media&token=c6fb0e9f-8fb3-4cd2-8a6a-f14ccd68869f"
+            className="rounded-lg "
             layout="fill"
             objectFit="contain"
             alt="profile"
@@ -27,7 +25,7 @@ const page = () => {
         </div>
         <div>
           <h1 className="font-bold text-xl md:text-2xl lg:text-3xl tracking-widest">
-            This is Title
+            Mate Sat
           </h1>
           <p className="text-md tracking-wide">Blah Blah</p>
         </div>
@@ -53,22 +51,8 @@ const page = () => {
           eum amet consectetur adipisicing elit. Consectetur eum amet !
         </p>
       </div>
-      {/* <div className="w-full mb-10 h-[300px] md:h-[400px] lg:h-[500px] border rounded-lg  "> */}
-      <Lottie
-        options={{
-          animationData: data,
-          loop: true,
-        }}
 
-        // width={"100%"}
-        // height={290}
-      />
-      <Lottie
-        options={{
-          animationData: data1,
-          loop: true,
-        }}
-      />
+      {/* <div className="w-full mb-10 h-[300px] md:h-[400px] lg:h-[500px] border rounded-lg  "> */}
       {/* <Image
           src="/next.svg"
           className="border "
