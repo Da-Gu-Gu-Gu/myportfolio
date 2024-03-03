@@ -68,10 +68,10 @@ const page = () => {
       <div className="mb-10">
         <h2 className="font-semibold text-lg">About</h2>
         <p className="tracking-wider mt-3 text-gray-700">
-          "Mateset" is a mobile application built using React Native and
-          available for download on the Google Play Store. The app for employee
-          who work in brancehs/agent.The app offer product's stock,customer
-          management and order,sale invoice management.
+          Mateset is a mobile application built using React Native and available
+          for download on the Google Play Store. The app for employee who work
+          in brancehs/agent.The app offer stock,customer management and
+          order,sale invoice management.
         </p>
       </div>
       <ImageSlider />
