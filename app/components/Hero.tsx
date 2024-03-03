@@ -5,14 +5,15 @@ import CustomName from "../CustomName";
 const Hero = () => {
   return (
     <div className="w-full md:w-[90%] lg:w-full mx-auto px-5 lg:px-[120px]  my-10  ">
-      <div className="w-[100px] h-[100px] rounded-full ">
+      <div className="w-[100px] h-[100px] rounded-full relative">
         <Image
           src={
             "https://www.freecodecamp.org/news/content/images/size/w60/2022/03/deee.jpg"
           }
           alt="Hero"
-          width={100}
-          height={100}
+          sizes="100%"
+          fill
+          style={{ objectFit: "cover" }}
           className="rounded-full object-center object-fit"
         />
       </div>
