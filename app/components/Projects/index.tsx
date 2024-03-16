@@ -97,9 +97,9 @@ const Projects = () => {
                   Selected Projects
                 </h1>
                 <p className="mt-10 w-[450px] text-gray-400 text-sm">
-                  Presented here are several projects I've actively contributed
-                  to. Click on each to explore further details and gain deeper
-                  insights into my involvement and contributions.
+                  Presented here are several projects I have actively
+                  contributed to. Click on each to explore further details and
+                  gain deeper insights into my involvement and contributions.
                 </p>
               </div>
               {projectsData.map((data, i) => {
