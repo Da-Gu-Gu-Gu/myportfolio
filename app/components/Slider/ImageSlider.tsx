@@ -11,12 +11,12 @@ const ImageSlider = () => {
   ];
 
   return (
-    <div className="w-full flex gap-2">
+    <div className="w-full mb-10 h-[200px] md:h-[320px] lg:h-[440px] flex  gap-2">
       {images.map((img) => {
         return (
           <div
             key={img}
-            className="w-[300px] md:w-1/5 mb-10 h-[100px] md:h-[350px] lg:h-[450px] overflow-hidden  rounded-lg relative  "
+            className="   w-1/5 h-full overflow-hidden  rounded-lg  relative "
           >
             <Image
               src={img}

@@ -3,10 +3,12 @@ import Projects from "./components/Projects";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* Home */}
       <Hero />
       <Projects />
+      <div className="h-screen w-screen">aa</div>
+      <div className="h-screen w-screen">bb</div>
     </div>
   );
 };

@@ -14,7 +14,22 @@ export interface Project {
 const ProjectCard = ({ project }: Project) => {
   return (
     <Link href={"/project/1"}>
-      <div className="border h-full w-full  rounded">
+      <div className="rounded-xl p-5 bg-sky-300">
+        <div className="flex justify-between">
+          <h2>{project?.title}</h2>
+          <div className="flex gap-3">View</div>
+        </div>
+        <div className="w-full mt-5 flex-grow h-[350px] rounded-xl overflow-hidden  ">
+          <video className="w-full h-full object-cover " loop autoPlay muted>
+            <source
+              src={project.videoUrl}
+              type="video/mp4"
+              className="w-full h-full object-cover"
+            />
+          </video>
+        </div>
+      </div>
+      {/* <div className=" h-full w-[500px]   rounded  ">
         <div className="flex w-full  items-center h-[60px] border">
           <p className="font-bold w-[100px]  border-r h-full flex items-center justify-center">
             {project.id}
@@ -31,42 +46,41 @@ const ProjectCard = ({ project }: Project) => {
           </p>
         </div>
         {/* middle part */}
+      {/* <div className="flex w-full items-center border">
+        <p className="font-bold w-[100px] hidden md:flex -rotate-90 h-full  items-center justify-center">
+          {project.type}
+        </p>
 
-        <div className="flex w-full items-center border">
-          <p className="font-bold w-[100px] hidden md:flex -rotate-90 h-full  items-center justify-center">
-            {project.type}
-          </p>
-
-          <div className="w-full flex-grow h-[290px] rounded relative ">
-            <video
-              className="w-full h-full object-cover bg-red-300"
-              loop
-              autoPlay
-              muted
-            >
-              <source
-                src={project.videoUrl}
-                type="video/mp4"
-                className="w-full h-full object-cover"
-              />
-            </video>
-          </div>
-          <p className="font-bold hidden md:flex w-[100px]   rotate-90 h-full  items-center justify-center">
-            {project.type}
-          </p>
+        <div className="w-full flex-grow h-[290px] rounded relative ">
+          <video
+            className="w-full h-full object-cover bg-red-300"
+            loop
+            autoPlay
+            muted
+          >
+            <source
+              src={project.videoUrl}
+              type="video/mp4"
+              className="w-full h-full object-cover"
+            />
+          </video>
         </div>
-        <div className="flex w-full  items-center h-[60px] border">
-          <p className="font-bold w-[100px]  border-r h-full flex items-center justify-center">
-            {project.id}
-          </p>
-          <h4 className="text-xl font-bold w-full flex flex-grow items-center justify-center">
-            View Detail
-          </h4>
-          <p className="font-bold w-[100px]  border-l h-full flex items-center justify-center">
-            {project.id}
-          </p>
-        </div>
+        <p className="font-bold hidden md:flex w-[100px]   rotate-90 h-full  items-center justify-center">
+          {project.type}
+        </p>
       </div>
+      <div className="flex w-full  items-center h-[60px] border">
+        <p className="font-bold w-[100px]  border-r h-full flex items-center justify-center">
+          {project.id}
+        </p>
+        <h4 className="text-xl font-bold w-full flex flex-grow items-center justify-center">
+          View Detail
+        </h4>
+        <p className="font-bold w-[100px]  border-l h-full flex items-center justify-center">
+          {project.id}
+        </p>
+      </div> */}
+      {/* </div> */}
     </Link>
   );
 };

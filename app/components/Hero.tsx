@@ -5,23 +5,20 @@ import CustomName from "../CustomName";
 const Hero = () => {
   return (
     <div className="w-full md:w-[90%] lg:w-full mx-auto px-5 lg:px-[120px]  my-10  ">
-      <div className="w-[100px] h-[100px] rounded-full relative">
-        <Image
-          src={
-            "https://www.freecodecamp.org/news/content/images/size/w60/2022/03/deee.jpg"
-          }
-          alt="Hero"
-          sizes="100%"
-          fill
-          style={{ objectFit: "cover" }}
-          className="rounded-full object-center object-fit"
-        />
+      <div className="w-max mx-auto flex flex-col gap-3 text-center text-3xl  lg:text-5xl">
+        <div className="w-max flex items-center gap-1 border-gray-500/50 border text-sm mx-auto px-3 py-1 rounded-2xl">
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+          open to work
+        </div>
+        <div className="italic flex flex-col gap-3">
+          <p>Hein Htet Aung</p>
+          <p>Frontend Developer</p>
+          <p>you can trust</p>
+        </div>
       </div>
-      <h1 className="mt-5 text-pretty text-left text-lg  md:text-2xl lg:text-4xl leading-snug tracking-wider">
-        Hello, I am Hein Htet, a<span>Javascript</span> Developer with
-        <span>2 Years</span> of experience in crafting exceptional user
-        interfaces.
-      </h1>
     </div>
   );
 };
