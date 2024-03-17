@@ -15,7 +15,7 @@ const Projects = () => {
       id: "01",
       title: "Mate Sat",
       type: "Application",
-      color: "bg-white",
+      color: "bg-[#efcfe3]",
       videoUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/matesat_720p.webm?alt=media&token=2c8269b5-7d16-4971-ac19-6bc991d8d889",
     },
@@ -27,6 +27,7 @@ const Projects = () => {
       videoUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/theestate_720p.webm?alt=media&token=57779874-e8b5-4b24-b8de-b4427ebf2d0a",
     },
+
     {
       id: "03",
       type: "Website",
@@ -36,7 +37,7 @@ const Projects = () => {
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
     },
     {
-      id: "03",
+      id: "04",
       type: "Website",
       title: "The Connect Four ",
       color: "bg-[#ff6392]",
@@ -44,12 +45,20 @@ const Projects = () => {
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
     },
     {
-      id: "03",
+      id: "05",
       type: "Website",
       title: "The Space ",
       color: "bg-[#fcf300]",
       videoUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
+    },
+    {
+      id: "06",
+      type: "Application",
+      title: "Text Repeater",
+      color: "bg-[#00b4d8]",
+      videoUrl:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/Showreel_-Mobile-screens-%5Bremix%5D.webm?alt=media&token=69e84f00-3bc4-45f4-9707-6821ac4ea360",
     },
   ];
   let mm = gsap.matchMedia();
@@ -96,7 +105,7 @@ const Projects = () => {
         <div className=" flex ">
           <div
             ref={sectionRef}
-            className="flex flex-col md:flex-row w-full  my-5 "
+            className="flex flex-col md:flex-row w-full  my-5 px-3 "
           >
             <HorizontalScroll>
               <div className="w-full md:w-[500px] h-full md:mr-3">

@@ -14,8 +14,8 @@ const Hero = () => {
           open to work
         </div>
         <div className=" flex flex-col gap-3">
-          <p>Hein Htet Aung</p>
-          <p className="text-xl">Frontend Developer</p>
+          <p className="text-3xl md:text-7xl">Hein Htet Aung</p>
+          <p className="text-xl md:text-3xl">Frontend Developer</p>
           {/* <p>you can trust</p> */}
         </div>
       </div>
