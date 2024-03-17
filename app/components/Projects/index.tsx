@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import Marquee from "react-fast-marquee";
+
 import HorizontalScroll from "../HorizotalScroll";
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import CustomMarquee from "../CustomMarquee";
 
 gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
@@ -14,6 +15,7 @@ const Projects = () => {
       id: "01",
       title: "Mate Sat",
       type: "Application",
+      color: "bg-white",
       videoUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/matesat_720p.webm?alt=media&token=2c8269b5-7d16-4971-ac19-6bc991d8d889",
     },
@@ -21,13 +23,23 @@ const Projects = () => {
       id: "02",
       title: "The Estate",
       type: "Application",
+      color: "bg-[#9d4edd]",
       videoUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/theestate_720p.webm?alt=media&token=57779874-e8b5-4b24-b8de-b4427ebf2d0a",
     },
     {
       id: "03",
       type: "Website",
-      title: "The Space ",
+      title: "M-Kitchen",
+      color: "bg-[#e9ff70]",
+      videoUrl:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
+    },
+    {
+      id: "03",
+      type: "Website",
+      title: "The Connect Four ",
+      color: "bg-[#ff6392]",
       videoUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
     },
@@ -35,13 +47,7 @@ const Projects = () => {
       id: "03",
       type: "Website",
       title: "The Space ",
-      videoUrl:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
-    },
-    {
-      id: "03",
-      type: "Website",
-      title: "The Space ",
+      color: "bg-[#fcf300]",
       videoUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
     },
@@ -50,7 +56,7 @@ const Projects = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
   useEffect(() => {
-    const pin = mm.add("(min-width:100px)", () => {
+    const pin = mm.add("(min-width:768px)", () => {
       gsap.fromTo(
         sectionRef.current,
         {
@@ -58,11 +64,9 @@ const Projects = () => {
         },
         {
           translateX: (projectsData.length + 1) * -500 + "px",
-          // translateX: "-820vw",
-          // translateX: "-420vw",
-          // translateX: "-220vw",
+
           ease: "none",
-          // duration: 1,
+
           scrollTrigger: {
             trigger: triggerRef.current,
             start: "top top",
@@ -80,23 +84,26 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className=" w-screen   overflow-hidden   py-40">
+    <div className=" w-screen   overflow-hidden   mt-40">
       <div
         ref={triggerRef}
         // id="mainContainer"
-        className="bg-black flex flex-col justify-evenly h-screen mx-auto w-[90vw] aa overflow-hidden   text-white p-5 rounded-xl"
+        className="bg-black flex flex-col justify-evenly h-full md:h-screen mx-auto w-screen md:w-[90vw]  overflow-hidden   text-white p-3 md:p-5 rounded-xl"
       >
-        <Marquee autoFill className="tracking-wider ">
-          🌟SHOWCASE
-        </Marquee>
+        <div className="my-3">
+          <CustomMarquee />
+        </div>
         <div className=" flex ">
-          <div ref={sectionRef} className="flex    my-5 ">
+          <div
+            ref={sectionRef}
+            className="flex flex-col md:flex-row w-full  my-5 "
+          >
             <HorizontalScroll>
-              <div className="w-[500px] h-full mr-3">
-                <h1 className="text-4xl bg-gradient-to-r from-lime-500 via-amber-300 to-amber-500 bg-clip-text text-transparent">
+              <div className="w-full md:w-[500px] h-full md:mr-3">
+                <h1 className="text-3xl md:text-6xl font-semibold text-gray-300">
                   Selected Projects
                 </h1>
-                <p className="mt-10 w-[450px] text-gray-400 text-sm">
+                <p className="mt-5 w-full md:mt-10 md:w-[400px] text-gray-400 ">
                   Presented here are several projects I have actively
                   contributed to. Click on each to explore further details and
                   gain deeper insights into my involvement and contributions.
@@ -104,7 +111,10 @@ const Projects = () => {
               </div>
               {projectsData.map((data, i) => {
                 return (
-                  <div key={i} className="w-[500px] mr-3 h-full flex-1 pannel">
+                  <div
+                    key={i}
+                    className="md:w-[500px] mr-3 h-full flex-1 pannel"
+                  >
                     <ProjectCard project={data} />
                   </div>
                 );
@@ -112,9 +122,9 @@ const Projects = () => {
             </HorizontalScroll>
           </div>
         </div>
-        <Marquee autoFill className="tracking-wider ">
-          🌟SHOWCASE
-        </Marquee>
+        <div className="my-3">
+          <CustomMarquee />
+        </div>
       </div>
     </div>
   );

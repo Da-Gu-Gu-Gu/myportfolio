@@ -3,7 +3,7 @@ interface horizontal {
 }
 const HorizontalScroll = ({ children }: horizontal) => {
   return (
-    <div className="horizontal-container h-full flex flex-nowrap  ">
+    <div className="horizontal-container h-full flex flex-col  gap-10 md:gap-0 md:flex-row flex-nowrap  ">
       {/* Your content goes here */}
       {children}
     </div>

@@ -5,6 +5,7 @@ export interface Project {
   project: {
     id: string;
     type: string;
+    color: string;
     // type: "Website" | "App";
     videoUrl: string;
     title: string;
@@ -14,12 +15,14 @@ export interface Project {
 const ProjectCard = ({ project }: Project) => {
   return (
     <Link href={"/project/1"}>
-      <div className="rounded-xl p-5 bg-sky-300">
+      <div
+        className={`rounded-xl cursor-pointer p-5 md:p-7 text-black pb-0 ${project.color}`}
+      >
         <div className="flex justify-between">
-          <h2>{project?.title}</h2>
-          <div className="flex gap-3">View</div>
+          <h2 className=" text-2xl">{project?.title}</h2>
+          <div className="flex gap-3 text-xl">View</div>
         </div>
-        <div className="w-full mt-5 flex-grow h-[350px] rounded-xl overflow-hidden  ">
+        <div className="w-full mt-5 md:mt-7 flex-grow h-[230px] md:h-[350px] rounded-t-xl overflow-hidden  ">
           <video className="w-full h-full object-cover " loop autoPlay muted>
             <source
               src={project.videoUrl}
