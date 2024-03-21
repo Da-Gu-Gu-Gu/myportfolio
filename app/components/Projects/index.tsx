@@ -34,7 +34,7 @@ const Projects = () => {
       title: "M-Kitchen",
       color: "bg-[#e9ff70]",
       videoUrl:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/mkitchen.webm?alt=media&token=f1fd5d90-35dd-40ae-be35-b7b4827c13b9",
     },
     {
       id: "04",
