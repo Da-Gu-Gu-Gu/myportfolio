@@ -12,27 +12,70 @@ const Cube = ({ light }: { light: string }) => {
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
-      0.1,
+      1,
       1000
     );
 
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     mount.current.appendChild(renderer.domElement);
 
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+    const material = new THREE.MeshStandardMaterial({
+      color: 0xff97b7,
+      //   wireframe: true,
+    });
     const cube = new THREE.Mesh(geometry, material);
     cubeRef.current = cube; // Save reference to cube
     scene.add(cube);
+    const sphere = new THREE.SphereGeometry(0.1, 18, 18);
+    const pointLight1 = new THREE.PointLight(0xffffff, 10);
+    pointLight1.position.set(1, 0, 1);
+    pointLight1.add(
+      new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xff0040 }))
+    );
 
-    camera.position.z = 5;
+    const pointLight2 = new THREE.PointLight(0xffffff, 10);
+    pointLight2.position.set(1, 1, 0);
+    pointLight2.add(
+      new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xff00ff }))
+    );
+
+    const pointLight3 = new THREE.PointLight(0xffffff, 10);
+    pointLight3.position.set(0, 1, 1);
+    pointLight3.add(
+      new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xfee440 }))
+    );
+    scene.add(pointLight2);
+    scene.add(pointLight1);
+    scene.add(pointLight3);
+    console.log(scene);
+
+    const ambientLight = new THREE.AmbientLight(0xffffff); // Adjust intensity as needed
+    scene.add(ambientLight);
+    camera.position.z = 4;
 
     const animate = () => {
       animationFrameId.current = requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
+      cube.rotation.x += 0.03;
+      cube.rotation.y += 0.02;
+      cube.rotation.z += 0.01;
 
+      const time = Date.now() * 0.0005;
+      const radius = 2;
+      //   const centerX = 0;
+      //   const centerY = 0;
+      const newX = Math.cos(time) * radius;
+      const newZ = Math.sin(time) * radius;
+      pointLight1.position.set(newX, 0, newZ);
+
+      const p2newX = 0.3 + Math.sin(time) * radius;
+      const p2newY = Math.cos(time) * radius;
+      pointLight2.position.set(p2newX, p2newY, 0);
+
+      const p3newZ = Math.cos(time) * radius;
+      const p3newY = Math.sin(time) * radius;
+      pointLight3.position.set(0, p3newY, p3newZ);
       renderer.render(scene, camera);
     };
 

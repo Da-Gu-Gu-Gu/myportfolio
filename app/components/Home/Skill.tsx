@@ -4,7 +4,7 @@ import SkillAnimation from "../../animations/Skill";
 import Cube from "./Cube";
 
 const Skill = () => {
-  const [light, setLight] = useState("rgb(31,47,64)");
+  const [light, setLight] = useState("rgb(255, 151, 183)");
   const skills = [
     { name: "JAVACRIPT", color: "rgb(255, 221, 0)" }, // JavaScript yellow
     { name: "TYPESCRITPT", color: "rgb(0, 122, 204)" }, // TypeScript blue
@@ -32,7 +32,7 @@ const Skill = () => {
                 <div key={x.name}>
                   <h1
                     onMouseEnter={() => setLight(x.color)}
-                    onMouseLeave={() => setLight("rgb(31,47,64)")}
+                    onMouseLeave={() => setLight("rgb(255, 151, 183)")}
                     className="text-4xl md:text-6xl lg:text-5xl language overflow-hidden tracking-widest   pl-2 py-5"
                   >
                     {x.name}
