@@ -97,7 +97,7 @@ const Projects = () => {
       <div
         ref={triggerRef}
         // id="mainContainer"
-        className="bg-black flex flex-col justify-evenly h-full md:h-screen mx-auto w-screen md:w-[90vw]  overflow-hidden   text-white p-3 md:p-5 rounded-xl"
+        className="bg-black flex flex-col justify-evenly h-full md:h-screen mx-auto w-screen md:w-[90vw]  overflow-hidden   text-white p-3 md:p-5 rounded-t-xl"
       >
         <div className="my-3">
           <CustomMarquee />

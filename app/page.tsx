@@ -1,4 +1,5 @@
 import Hero from "./components/Hero";
+import Skill from "./components/Home/Skill";
 import Projects from "./components/Projects";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
       {/* Home */}
       <Hero />
       <Projects />
+      <Skill />
       <div className="h-screen w-screen">aa</div>
       <div className="h-screen w-screen">bb</div>
     </div>
