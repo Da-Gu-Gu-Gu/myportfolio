@@ -53,7 +53,7 @@ const Cube = ({ light }: { light: string }) => {
 
     const ambientLight = new THREE.AmbientLight(0xffffff); // Adjust intensity as needed
     scene.add(ambientLight);
-    camera.position.z = 4;
+    camera.position.z = 5;
 
     const animate = () => {
       animationFrameId.current = requestAnimationFrame(animate);

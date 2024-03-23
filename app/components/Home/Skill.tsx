@@ -32,7 +32,7 @@ const Skill = () => {
                 <div key={x.name}>
                   <h1
                     onMouseEnter={() => setLight(x.color)}
-                    onMouseLeave={() => setLight("rgb(255, 151, 183)")}
+                    onMouseLeave={() => setLight("rgb(255, 255, 255)")}
                     className="text-4xl md:text-6xl lg:text-5xl language overflow-hidden tracking-widest   pl-2 py-5"
                   >
                     {x.name}
