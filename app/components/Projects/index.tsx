@@ -93,7 +93,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className=" w-screen   overflow-hidden   mt-40">
+    <div className=" w-screen   overflow-hidden   ">
       <div
         ref={triggerRef}
         // id="mainContainer"
@@ -102,17 +102,17 @@ const Projects = () => {
         <div className="my-3">
           <CustomMarquee />
         </div>
-        <div className=" flex ">
+        <div className=" flex h-full w-full">
           <div
             ref={sectionRef}
-            className="flex flex-col md:flex-row w-full  my-5 px-3 "
+            className="flex flex-col  md:flex-row w-full  my-5 px-3 "
           >
             <HorizontalScroll>
-              <div className="w-full md:w-[500px] h-full md:mr-3">
-                <h1 className="text-3xl md:text-6xl font-semibold text-gray-300">
+              <div className="w-full md:w-[500px] 2xl:w-[30vw] flex flex-col justify-center h-full md:mr-3">
+                <h1 className="text-3xl md:text-4xl 2xl:text-[3rem] font-semibold text-gray-300">
                   Selected Projects
                 </h1>
-                <p className="mt-5 w-full md:mt-10 md:w-[400px] text-gray-400 ">
+                <p className="mt-5 w-full md:mt-10  md:w-[400px] xl:w-full 2xl:text-2xl text-gray-400 ">
                   Presented here are several projects I have actively
                   contributed to. Click on each to explore further details and
                   gain deeper insights into my involvement and contributions.
@@ -122,7 +122,7 @@ const Projects = () => {
                 return (
                   <div
                     key={i}
-                    className="md:w-[500px] mr-3 h-full flex-1 pannel"
+                    className="w-full md:w-[500px] 2xl:w-[30vw] flex justify-center items-center mr-3 h-full  flex-1 pannel"
                   >
                     <ProjectCard project={data} />
                   </div>

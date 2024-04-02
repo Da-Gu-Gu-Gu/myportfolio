@@ -4,13 +4,13 @@ import SkillAnimation from "../../animations/Skill";
 import Cube from "./Cube";
 
 const Skill = () => {
-  const [light, setLight] = useState("rgb(255, 151, 183)");
+  const [light, setLight] = useState("rgb(0, 0, 0)");
   const skills = [
     { name: "JAVACRIPT", color: "rgb(255, 221, 0)" }, // JavaScript yellow
     { name: "TYPESCRITPT", color: "rgb(0, 122, 204)" }, // TypeScript blue
     { name: "REACT", color: "rgb(97, 218, 251)" }, // React light blue
     { name: "REACT NATIVE", color: "rgb(0, 216, 255)" }, // React Native cyan
-    { name: "NEXT", color: "rgb(33, 33, 33)" }, // Next.js black (as an example)
+    { name: "NEXT", color: "rgb(225, 225,225)" }, // Next.js black (as an example)
     { name: "GSAP", color: "rgb(136, 204, 0)" }, // GSAP green
   ];
   useEffect(() => {
@@ -32,7 +32,7 @@ const Skill = () => {
                 <div key={x.name}>
                   <h1
                     onMouseEnter={() => setLight(x.color)}
-                    onMouseLeave={() => setLight("rgb(255, 255, 255)")}
+                    onMouseLeave={() => setLight("rgb(0, 0, 0)")}
                     className="text-4xl md:text-6xl lg:text-5xl language overflow-hidden tracking-widest   pl-2 py-5"
                   >
                     {x.name}

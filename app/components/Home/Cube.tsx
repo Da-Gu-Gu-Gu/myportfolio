@@ -1,12 +1,24 @@
-// components/Cube.js
-
 import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 
 const Cube = ({ light }: { light: string }) => {
   const mount = useRef<any>(null);
   const animationFrameId = useRef<any>(null);
   const cubeRef = useRef<any>(null);
+
+  const params = {
+    threshold: 0,
+    strength: 0.9,
+    radius: 0,
+    exposure: 1,
+  };
+
+  let composer: EffectComposer;
+
   useEffect(() => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -44,7 +56,7 @@ const Cube = ({ light }: { light: string }) => {
     const pointLight3 = new THREE.PointLight(0xffffff, 10);
     pointLight3.position.set(0, 1, 1);
     pointLight3.add(
-      new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xfee440 }))
+      new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xff3f00 }))
     );
     scene.add(pointLight2);
     scene.add(pointLight1);
@@ -54,6 +66,25 @@ const Cube = ({ light }: { light: string }) => {
     const ambientLight = new THREE.AmbientLight(0xffffff); // Adjust intensity as needed
     scene.add(ambientLight);
     camera.position.z = 5;
+
+    const renderScene = new RenderPass(scene, camera);
+
+    const bloomPass = new UnrealBloomPass(
+      new THREE.Vector2(window.innerWidth, window.innerHeight),
+      1.5,
+      0.4,
+      0.85
+    );
+    bloomPass.threshold = params.threshold;
+    bloomPass.strength = params.strength;
+    bloomPass.radius = params.radius;
+
+    const outputPass = new OutputPass();
+
+    composer = new EffectComposer(renderer);
+    composer.addPass(renderScene);
+    composer.addPass(bloomPass);
+    composer.addPass(outputPass);
 
     const animate = () => {
       animationFrameId.current = requestAnimationFrame(animate);
@@ -77,6 +108,8 @@ const Cube = ({ light }: { light: string }) => {
       const p3newY = Math.sin(time) * radius;
       pointLight3.position.set(0, p3newY, p3newZ);
       renderer.render(scene, camera);
+
+      composer.render();
     };
 
     animate();

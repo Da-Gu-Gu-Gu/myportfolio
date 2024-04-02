@@ -16,13 +16,13 @@ const ProjectCard = ({ project }: Project) => {
   return (
     <Link href={"/project/1"}>
       <div
-        className={`rounded-xl cursor-pointer p-5 pb-0 md:pb-0  md:p-7 text-black ${project.color}`}
+        className={`rounded-xl h-full w-full ursor-pointer p-5 pb-0 md:pb-0  md:p-7 text-black ${project.color}`}
       >
         <div className="flex justify-between">
           <h2 className=" text-2xl">{project?.title}</h2>
           <div className="flex gap-3 text-xl">View</div>
         </div>
-        <div className="w-full mt-5 md:mt-7 flex-grow h-[300px] md:h-[350px] rounded-t-xl overflow-hidden  ">
+        <div className="w-full mt-5 md:mt-7 flex-grow h-[300px] md:h-[350px] lg:h-full rounded-t-xl overflow-hidden  ">
           <video className="w-full h-full object-cover " loop autoPlay muted>
             <source
               src={project.videoUrl}
