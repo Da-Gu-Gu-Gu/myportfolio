@@ -56,7 +56,7 @@ const Cube = ({ light }: { light: string }) => {
     const pointLight3 = new THREE.PointLight(0xffffff, 10);
     pointLight3.position.set(0, 1, 1);
     pointLight3.add(
-      new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xff3f00 }))
+      new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0x6320ee }))
     );
     scene.add(pointLight2);
     scene.add(pointLight1);
@@ -116,7 +116,7 @@ const Cube = ({ light }: { light: string }) => {
 
     return () => {
       cancelAnimationFrame(animationFrameId.current);
-      mount.current.removeChild(renderer.domElement);
+      mount?.current?.removeChild(renderer.domElement);
     };
   }, []);
 

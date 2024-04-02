@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 
 import HorizontalScroll from "../HorizotalScroll";
-import { gsap } from "gsap";
+import { Power2, gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import CustomMarquee from "../CustomMarquee";
@@ -64,9 +64,28 @@ const Projects = () => {
   let mm = gsap.matchMedia();
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
+  const tl = gsap.timeline();
   useEffect(() => {
     const pin = mm.add("(min-width:768px)", () => {
-      gsap.fromTo(
+      tl.fromTo(
+        triggerRef.current,
+        {
+          scaleX: "90%",
+        },
+        {
+          scaleX: "100%",
+          borderRadius: 0,
+          ease: Power2.easeOut,
+          scrollTrigger: {
+            trigger: ".test",
+            start: "top 100px",
+            end: "40px top",
+            scrub: true,
+
+            // markers: true,
+          },
+        }
+      ).fromTo(
         sectionRef.current,
         {
           translateX: 0,
@@ -80,11 +99,12 @@ const Projects = () => {
             trigger: triggerRef.current,
             start: "top top",
             end: "150px top",
-            scrub: 1,
+            scrub: 0.5,
             pin: true,
             // markers: true,
           },
-        }
+        },
+        ">+=1"
       );
     });
     return () => {
@@ -93,11 +113,11 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className=" w-screen   overflow-hidden   ">
+    <div className=" w-screen test mx-auto  overflow-hidden   ">
       <div
         ref={triggerRef}
         // id="mainContainer"
-        className="bg-black flex flex-col justify-evenly h-full md:h-screen mx-auto w-screen md:w-[90vw]  overflow-hidden   text-white p-3 md:p-5 rounded-t-xl"
+        className="bg-black  flex flex-col justify-evenly h-full md:h-screen mx-auto w-screen   md:scale-x-90 overflow-hidden   text-white p-3 md:p-5 rounded-t-xl"
       >
         <div className="my-3">
           <CustomMarquee />
