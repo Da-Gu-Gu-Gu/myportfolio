@@ -42,10 +42,18 @@ const Projects = () => {
       title: "The Connect Four ",
       color: "bg-[#ff6392]",
       videoUrl:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/New-file.webm?alt=media&token=660307a5-9520-44c8-ab2e-ee338f1d73cc",
     },
     {
       id: "05",
+      type: "Website",
+      title: "Rock Paper Stone ",
+      color: "bg-[#ff7900]",
+      videoUrl:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/New-file%20(1).webm?alt=media&token=2daefd69-015d-4371-b3fe-0a477e1cf8ae",
+    },
+    {
+      id: "06",
       type: "Website",
       title: "The Space ",
       color: "bg-[#fcf300]",
@@ -53,7 +61,7 @@ const Projects = () => {
         "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
     },
     {
-      id: "06",
+      id: "07",
       type: "Application",
       title: "Text Repeater",
       color: "bg-[#00b4d8]",
