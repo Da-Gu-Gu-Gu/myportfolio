@@ -1,17 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import CustomName from "../CustomName";
+import Status from "./Status";
 
 const Hero = () => {
   return (
-    <div className="w-full md:w-[90%] lg:w-full mx-auto px-5 lg:px-[120px] flex flex-col justify-center h-[50vh] md:h-[70vh] lg:h-[70vh] ">
+    <div className="w-full md:w-[90%] lg:w-full mx-auto px-5 lg:px-[120px] flex flex-col bg-white justify-center h-[50vh] md:h-[70vh] lg:h-[70vh] ">
       <div className="w-max mx-auto flex flex-col gap-3 text-center text-3xl  lg:text-5xl">
-        <div className="w-max flex items-center gap-1 border-gray-500 border text-sm mx-auto px-3 py-1 rounded-2xl">
-          <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 "></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
-          </span>
-          open to work
+        <div className="mx-auto">
+          <Status />
         </div>
         <div className=" flex flex-col gap-3">
           <p className="text-[2rem] md:text-7xl">Hein Htet Aung</p>

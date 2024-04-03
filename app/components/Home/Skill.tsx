@@ -23,8 +23,8 @@ const Skill = () => {
       <div className="w-[90vw]  absolute top-0 left-1/2 -translate-x-1/2 min-h-screen flex items-center py-10  mx-auto">
         {/* // <div className="w-screen skill min-h-screen px-14 flex items-center md:pl-14 pl-8"> */}
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full ">
-          <h1 className="text-4xl md:text-6xl lg:text-5xl whatiuse">
-            WHAT I USE
+          <h1 className="text-4xl md:text-6xl text-gray-400 lg:text-5xl whatiuse">
+            WHAT I <span className="text-white">USE</span>
           </h1>
           <div className="flex-col w-full h-full  mt-10 md:mt-20 lg:mt-0 bg-gray-400/20 rounded-md p-3">
             {skills.map((x) => {
