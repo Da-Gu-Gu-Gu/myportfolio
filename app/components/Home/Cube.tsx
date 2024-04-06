@@ -12,9 +12,9 @@ const Cube = ({ light }: { light: string }) => {
 
   const params = {
     threshold: 0,
-    strength: 0.9,
+    strength: 0.3,
     radius: 0,
-    exposure: 1,
+    exposure: 0.4,
   };
 
   let composer: EffectComposer;
@@ -35,7 +35,7 @@ const Cube = ({ light }: { light: string }) => {
     const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
     const material = new THREE.MeshStandardMaterial({
       color: 0xff97b7,
-      //   wireframe: true,
+      // wireframe: true,
     });
     const cube = new THREE.Mesh(geometry, material);
     cubeRef.current = cube; // Save reference to cube
@@ -86,6 +86,16 @@ const Cube = ({ light }: { light: string }) => {
     composer.addPass(bloomPass);
     composer.addPass(outputPass);
 
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
+    };
+
+    window.addEventListener("resize", handleResize);
+
     const animate = () => {
       animationFrameId.current = requestAnimationFrame(animate);
       cube.rotation.x += 0.03;
@@ -116,6 +126,7 @@ const Cube = ({ light }: { light: string }) => {
 
     return () => {
       cancelAnimationFrame(animationFrameId.current);
+      window.removeEventListener("resize", handleResize);
       mount?.current?.removeChild(renderer.domElement);
     };
   }, []);
