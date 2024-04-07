@@ -1,11 +1,15 @@
 import React from "react";
 import ModelViewer from "../components/About/Model";
+import Profile from "./Profile";
 
 const page = () => {
   return (
-    <div className="w-screen overflow-hidden h-screen bg-black">
+    <div className=" overflow-hidden">
       <div className="bg-white">
         <ModelViewer />
+      </div>
+      <div className="w-[90vw] lg:w-[40vw] mx-auto">
+        <Profile />
       </div>
     </div>
   );
