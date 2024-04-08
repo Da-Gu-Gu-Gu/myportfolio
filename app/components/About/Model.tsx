@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 const ModelViewer = () => {
   const containerRef = useRef<any>(null);
   const mount = useRef<any>(null);
@@ -20,13 +20,21 @@ const ModelViewer = () => {
       1,
       1000
     );
-    camera.position.set(0, 1.4, 2);
+    camera.position.set(0, 1.3, 1.5);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     mount?.current?.appendChild(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+    controls.dampingFactor = 0.25;
+    controls.screenSpacePanning = false;
+    controls.minDistance = 1;
+    controls.maxDistance = 100;
+    controls.maxPolarAngle = Math.PI / 2;
 
     const plateGeo = new THREE.PlaneGeometry(3, 3);
     const plateMaterial = new THREE.MeshStandardMaterial({
@@ -45,7 +53,8 @@ const ModelViewer = () => {
       "./character.glb",
       (gltf: any) => {
         modelRef.current = gltf.scene;
-        modelRef.current.scale.set(0.1, 0.1, 0.1);
+        modelRef.current.scale.set(0.08, 0.08, 0.08);
+        modelRef.current.position.z = 0.2;
         camera.lookAt(modelRef.current.position);
         scene.add(gltf.scene);
 
@@ -80,11 +89,12 @@ const ModelViewer = () => {
 
     const animate = () => {
       animationFrameId.current = requestAnimationFrame(animate);
-
+      // Update OrbitControls
+      controls.update();
       // Rotate model
-      if (modelRef.current) {
-        modelRef.current.rotation.y += 0.01;
-      }
+      // if (modelRef.current) {
+      //   modelRef.current.rotation.y += 0.01;
+      // }
 
       renderer.render(scene, camera);
     };
@@ -111,7 +121,7 @@ const ModelViewer = () => {
   return (
     <div
       ref={containerRef}
-      className="w-screen h-[300px] mx-auto md:w-[40vw] md:h-[40vh] lg:h-[50vh]  flex justify-center"
+      className="w-screen h-[30vh] mx-auto md:w-[40vw] md:h-[30vh] lg:h-[30vh]  flex justify-center"
     >
       <div ref={mount} />
     </div>

@@ -32,7 +32,7 @@ const page = () => {
   ];
 
   return (
-    <div className="w-full md:w-[90%] lg:w-full mx-auto px-5 lg:px-[120px]  my-10 ">
+    <div className="w-full  lg:w-[70vw] mx-auto px-5  my-10 ">
       <div className="flex gap-5 items-center">
         <div className="w-[100px] h-[100px]  rounded-lg relative shadow-[0px_16px_30px_0px_#004770]">
           <Image
@@ -100,17 +100,6 @@ const page = () => {
 
       <TechStack />
 
-      <div className="w-full flex-grow rounded relative overflow-hidden">
-        <video className="w-full h-full object-cover " loop autoPlay muted>
-          <source
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/matesat_720p.webm?alt=media&token=2c8269b5-7d16-4971-ac19-6bc991d8d889"
-            }
-            type="video/mp4"
-            className="w-full h-full object-cover"
-          />
-        </video>
-      </div>
       <div className=" grid grid-cols-1 md:grid-cols-2 mt-10">
         <div className="border border-b-0 border-black">
           <h2 className="font-semibold text-lg py-3 pl-3 border-b border-black">

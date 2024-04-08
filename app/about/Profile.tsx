@@ -42,7 +42,7 @@ const Profile = () => {
           <p className="text-gray-800">Base</p>
         </div>
       </div>
-      <div className="bg-gray-300/20 rounded p-5">
+      <div className=" rounded ">
         <h1 className="text-xl ">About</h1>
         <p className="text-sm my-3 text-gray-800 leading-[1.5rem]">
           As a JavaScript developer with a strong passion for frontend work, I
