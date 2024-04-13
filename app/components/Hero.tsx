@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import CustomName from "../CustomName";
+
 import Status from "./Status";
 
 const Hero = () => {
