@@ -9,8 +9,8 @@ const TechStack = () => {
     "React Native Async Storage",
   ];
   return (
-    <div className=" mb-10">
-      <h2 className="font-semibold text-lg">Tech Stack</h2>
+    <div className=" ">
+      {/* <h2 className="font-semibold text-lg">Tech Stack</h2> */}
       <Marquee autoFill>
         <div className="flex gap-3 flex-wrap mt-5 pl-3 w-full">
           {techStack.map((name) => {
