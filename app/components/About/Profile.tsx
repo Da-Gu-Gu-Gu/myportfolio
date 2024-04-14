@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import img1 from "../../public/img1.jpg";
-import img2 from "../../public/img2.jpg";
-import img3 from "../../public/img3.jpg";
-import img4 from "../../public/img4.jpg";
-import img5 from "../../public/img5.jpg";
-import img6 from "../../public/img6.jpg";
-import img7 from "../../public/img7.jpg";
+import img1 from "@/public/img1.jpg";
+import img2 from "@/public/img2.jpg";
+import img3 from "@/public/img3.jpg";
+import img4 from "@/public/img4.jpg";
+import img5 from "@/public/img5.jpg";
+import img6 from "@/public/img6.jpg";
+import img7 from "@/public/img7.jpg";
 
 const Profile = () => {
   const firstRow = [img1, img2, img3];

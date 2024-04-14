@@ -1,7 +1,5 @@
-import Image from "next/image";
 import React from "react";
-
-import Status from "./Status";
+import Status from "../Status";
 
 const Hero = () => {
   return (
@@ -13,7 +11,6 @@ const Hero = () => {
         <div className=" flex flex-col gap-3">
           <p className="text-[2rem] md:text-7xl">Hein Htet Aung</p>
           <p className="text-xl md:text-3xl">Frontend Developer</p>
-          {/* <p>you can trust</p> */}
         </div>
       </div>
     </div>

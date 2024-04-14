@@ -1,6 +1,6 @@
 import React from "react";
 import ModelViewer from "../components/About/Model";
-import Profile from "./Profile";
+import Profile from "../components/About/Profile";
 
 const page = () => {
   return (

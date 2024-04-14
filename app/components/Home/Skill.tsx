@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import SkillAnimation from "../../animations/Skill";
+import React, { useState } from "react";
 import Cube from "./Cube";
 
 const Skill = () => {
@@ -13,15 +12,11 @@ const Skill = () => {
     { name: "NEXT", color: "rgb(225, 225,225)" }, // Next.js black (as an example)
     { name: "GSAP", color: "rgb(136, 204, 0)" }, // GSAP green
   ];
-  useEffect(() => {
-    // SkillAnimation();
-  }, []);
 
   return (
     <div className="w-screen relative flex  bg-black text-white ">
       <Cube light={light} />
       <div className="w-[90vw]  absolute top-0 left-1/2 -translate-x-1/2 min-h-screen flex items-center py-10  mx-auto">
-        {/* // <div className="w-screen skill min-h-screen px-14 flex items-center md:pl-14 pl-8"> */}
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full ">
           <h1 className="text-4xl md:text-6xl text-gray-400 lg:text-5xl whatiuse">
             WHAT I <span className="text-white">USE</span>

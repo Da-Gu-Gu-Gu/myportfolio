@@ -1,15 +1,7 @@
-import TechStack from "@/app/components/Projects/TechStack";
-// import ImageSlider from "@/app/components/Slider/ImageSlider";
-
+import TechStack from "@/app/components/TechStack";
 import Image from "next/image";
 import React from "react";
 
-//overview
-//Role
-//detail
-//tech stack , theme,
-//challenge,experience
-//links
 const page = () => {
   const challenge =
     "Designing and implementing a user-friendly and responsive UI that meets the needs of employees in branches or agent roles.";
@@ -21,7 +13,6 @@ const page = () => {
     "We have facing stock inequal issue,and so wanna control stock and we want  access to control easily from anywhere even we are not at office.So, we change the system from dashboard to mobile application.";
 
   return (
-    // <div>aa</div>
     <div className="w-full  lg:w-[70vw] mx-auto px-5  my-10 ">
       <div className="flex justify-between gap-5 items-center">
         <div className="h-[75px] w-[75px] md:w-[100px] md:h-[100px]  rounded-lg relative shadow-[0px_16px_30px_0px_#004770]">
