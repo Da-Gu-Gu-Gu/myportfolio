@@ -25,7 +25,7 @@ const Projects = () => {
       type: "Application",
       color: "bg-[#9d4edd]",
       videoUrl:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/theestate_720p.webm?alt=media&token=57779874-e8b5-4b24-b8de-b4427ebf2d0a",
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/theestate_720p.mp4?alt=media&token=b95e7e49-f15c-490f-aaa8-d3b0e8895247",
     },
 
     {
@@ -58,7 +58,7 @@ const Projects = () => {
       title: "The Space ",
       color: "bg-[#fcf300]",
       videoUrl:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.webm?alt=media&token=80e66cce-517f-4f66-8f71-624f65bab8c3",
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.mp4?alt=media&token=7fbf5ada-3fcd-49f2-a9be-d9910413a7ac",
     },
     {
       id: "07",

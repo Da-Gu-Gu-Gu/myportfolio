@@ -1,4 +1,6 @@
 import TechStack from "@/app/components/Projects/TechStack";
+// import ImageSlider from "@/app/components/Slider/ImageSlider";
+
 import Image from "next/image";
 import React from "react";
 
@@ -9,26 +11,11 @@ import React from "react";
 //challenge,experience
 //links
 const page = () => {
-  const roles = [
-    "Designing and implementing the user interface using Figma, React Native and TypeScript.",
-    "Integrating the app with various APIs and services to enable functionalities such as product stock tracking, customer management, and order and sale invoice management.",
-    "Ensuring cross-platform compatibility for both Android and iOS by leveraging React Native's capabilities.",
-    " Utilizing TypeScript for enhanced code quality, type safety, and better development experiences.",
-    "Handling state management effectively using tools like react-native-asyncstoreage.",
-    "Collaborating with team members, including designers, to ensure cohesive development and adherence to project timelines.",
-    "Deploying the application on the Google Play Store following platform-specific processes.",
-  ];
+  const challenge =
+    "Designing and implementing a user-friendly and responsive UI that meets the needs of employees in branches or agent roles.";
 
-  const challenge = [
-    "Ensuring consistent functionality and design across both Android and iOS platforms can be challenging due to platform-specific nuances.",
-    "Navigating the deployment process on the Google Play Store may involve dealing with submission guidelines, certification, and addressing any platform-specific requirements.",
-  ];
-
-  const experience = [
-    "The adoption of TypeScript contributes to enhanced code quality, improved development experiences, and better collaboration within the development team.",
-    "Designing and implementing a user-friendly and responsive UI that meets the needs of employees in branches or agent roles.",
-    "Successfully deploying the application on the Google Play Store, navigating the submission process, and ensuring a smooth release to users.",
-  ];
+  const experience =
+    "Design from scartch ,then developed and deploying the application on the Google Play Store, navigating the submission process, and ensuring a smooth release to users.";
 
   const problem =
     "We have facing stock inequal issue,and so wanna control stock and we want  access to control easily from anywhere even we are not at office.So, we change the system from dashboard to mobile application.";
@@ -62,33 +49,44 @@ const page = () => {
           <p>App</p>
           <p className="text-gray-500 text-sm">Type</p>
         </div>
-        {/* <div className="flex flex-col gap-1 items-center w-1/3 border-r h-full justify-center">
-          <p>2</p>
-          <p className="text-gray-500 text-sm">Developer</p>
-        </div> */}
         <div className="flex flex-col gap-1 items-center w-1/2  h-full justify-center">
           <p className="">2 m</p>
           <p className="text-gray-500 text-sm">Timeline</p>
         </div>
       </div>
-      <div className="bg-blue-700 text-white px-3  py-5 md:p-5 rounded-lg">
-        <h2 className="font-semibold text-lg">About</h2>
-        <p className=" text-pretty leading-relaxed tracking-wide mt-3 text-sm">
-          Mateset is a mobile application built using React Native and available
-          for download on the Google Play Store. The app for employee who work
-          in brancehs/agent.The app offer stock,customer management and
-          order,sale invoice management.
-        </p>
-      </div>
-      <div className="my-5">
-        <h2 className="text-lg">Tech Stack</h2>
-        <TechStack />
-      </div>
-      <div className="bg-blue-700 text-white px-3  py-5 md:p-5 rounded-lg">
-        <h2 className="font-semibold text-lg">Problem</h2>
-        <p className=" text-pretty leading-relaxed tracking-wide mt-3 text-sm">
-          {problem}
-        </p>
+      <div className="flex flex-col gap-5">
+        <div className="bg-black text-white px-3  py-5 md:p-5 rounded-lg">
+          <h2 className="font-semibold text-lg">About</h2>
+          <p className=" text-pretty leading-relaxed tracking-wide mt-3 text-sm">
+            Mateset is a mobile application built using React Native and
+            available for download on the Google Play Store. The app for
+            employee who work in brancehs/agent.The app offer stock,customer
+            management and order,sale invoice management.
+          </p>
+        </div>
+        {/* <ImageSlider /> */}
+        <div className="">
+          <h2 className="text-lg">Tech Stack</h2>
+          <TechStack />
+        </div>
+        <div className=" px-3  py-5 md:p-5 rounded-lg">
+          <h2 className="font-semibold text-lg">Problem</h2>
+          <p className=" text-pretty leading-relaxed tracking-wide mt-3 text-sm">
+            {problem}
+          </p>
+        </div>
+        <div className=" px-3  py-5 md:p-5 rounded-lg">
+          <h2 className="font-semibold text-lg">Challenge</h2>
+          <p className=" text-pretty leading-relaxed tracking-wide mt-3 text-sm">
+            {challenge}
+          </p>
+        </div>
+        <div className=" px-3  py-5 md:p-5 rounded-lg">
+          <h2 className="font-semibold text-lg">Experience</h2>
+          <p className=" text-pretty leading-relaxed tracking-wide mt-3 text-sm">
+            {experience}
+          </p>
+        </div>
       </div>
     </div>
   );
