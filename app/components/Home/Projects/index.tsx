@@ -24,7 +24,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className=" w-screen test mx-auto  overflow-hidden  -z-10  ">
+    <div
+      id="projects"
+      className=" w-screen test mx-auto  overflow-hidden  -z-10  "
+    >
       <div
         ref={triggerRef}
         // id="mainContainer"

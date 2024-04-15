@@ -41,7 +41,7 @@ const Exp = () => {
   ];
 
   return (
-    <div className="bg-black w-screen min-h-screen py-10">
+    <div id="experience" className="bg-black w-screen min-h-screen py-10">
       <div className="w-[90vw] mx-auto py-20">
         <h1 className="text-4xl md:text-6xl text-gray-400 lg:text-5xl whatiuse">
           My <span className="text-white">History</span>

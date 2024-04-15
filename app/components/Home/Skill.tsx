@@ -32,7 +32,7 @@ const Skill = () => {
                   >
                     {x.name}
                   </h1>
-                  <div className="h-px line bg-white w-full" />
+                  <div className="h-px  bg-white w-full" />
                 </div>
               );
             })}

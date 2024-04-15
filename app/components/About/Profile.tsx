@@ -8,6 +8,7 @@ import img4 from "@/public/img4.jpg";
 import img5 from "@/public/img5.jpg";
 import img6 from "@/public/img6.jpg";
 import img7 from "@/public/img7.jpg";
+import Link from "next/link";
 
 const Profile = () => {
   const firstRow = [img1, img2, img3];
@@ -86,9 +87,15 @@ const Profile = () => {
       <div className="flex justify-between items-center">
         <p className=" text-md ">Reach Me</p>
         <div className="flex gap-3">
-          <p className="text-sm cursor-pointer underline">mail</p>
-          <p className="text-sm cursor-pointer underline">github</p>
-          <p className="text-sm cursor-pointer underline">linkedin</p>
+          <Link href={"https://github.com/Da-Gu-Gu-Gu"}>
+            <p className="text-sm cursor-pointer underline">mail</p>
+          </Link>
+          <Link href={"https://github.com/Da-Gu-Gu-Gu"}>
+            <p className="text-sm cursor-pointer underline">github</p>
+          </Link>
+          <Link href={"https://www.linkedin.com/in/dagugu/"}>
+            <p className="text-sm cursor-pointer underline">linkedin</p>
+          </Link>
         </div>
       </div>
     </div>
