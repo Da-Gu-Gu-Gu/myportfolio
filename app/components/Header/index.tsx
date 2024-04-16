@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
 
-const index = () => {
+const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="relative mb-3 z-40">
@@ -22,4 +22,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Header;

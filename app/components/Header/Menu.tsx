@@ -5,10 +5,10 @@ import React, { useEffect } from "react";
 
 const Menu = ({ onClose }: any) => {
   const links = [
+    { title: "Home", url: "/" },
     { title: "About Me", url: "/about" },
     { title: "Projects", url: "/#projects" },
-    { title: "History", url: "/#experience" },
-    { title: "Reach Me", url: "/#contact" },
+    { title: "Resume", url: "" },
   ];
 
   useEffect(() => {

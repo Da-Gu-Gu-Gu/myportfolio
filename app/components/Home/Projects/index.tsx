@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 
 import HorizontalScroll from "../../HorizotalScroll";
@@ -7,21 +7,75 @@ import HorizontalScroll from "../../HorizotalScroll";
 import CustomMarquee from "../../CustomMarquee";
 import { projectsData } from "./data";
 import { horizontalScrollAnimation } from "@/app/animations/ProjectScroll";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Projects = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
   useEffect(() => {
-    const animate = horizontalScrollAnimation(
-      triggerRef?.current,
-      sectionRef?.current
-    );
+    const mm = gsap.matchMedia();
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline();
+    const pin = mm.add("(min-width:768px)", () => {
+      tl.fromTo(
+        triggerRef.current,
+        {
+          scaleX: "90%",
+        },
+        {
+          scaleX: "100%",
+          borderRadius: 0,
+          ease: "power2.in",
+          scrollTrigger: {
+            trigger: ".test",
+            start: "top 100px",
+            end: "40px top",
+            scrub: true,
 
+            // markers: true,
+          },
+        }
+      ).fromTo(
+        sectionRef.current,
+        {
+          translateX: 0,
+        },
+        {
+          translateX: (projectsData.length + 1) * -500 + "px",
+
+          ease: "none",
+
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: "top top",
+            end: "150px top",
+            scrub: 0.5,
+            pin: true,
+            // markers: true,
+          },
+        },
+        ">+=1"
+      );
+    });
     return () => {
-      animate.kill();
+      tl.kill();
+      mm.kill();
+      pin.kill();
     };
   }, []);
+
+  // useLayoutEffect(() => {
+  //   const animate = horizontalScrollAnimation(
+  //     triggerRef?.current,
+  //     sectionRef?.current
+  //   );
+
+  //   return () => {
+  //     animate.kill();
+  //   };
+  // }, []);
 
   return (
     <div

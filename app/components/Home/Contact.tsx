@@ -4,7 +4,7 @@ import Status from "../Status";
 
 const Contact = () => {
   return (
-    <div id="contact" className="h-screen w-screen fixed top-0   ">
+    <div id="contac" className="h-screen w-screen fixed top-0   ">
       <div className="w-[90vw] h-screen mx-auto flex  flex-col gap-5 justify-center">
         <h1 className="uppercase  text-2xl lg:text-[1.5rem] xl:text-[2rem]">
           Let&apos;s create together a unique that looks like{" "}
