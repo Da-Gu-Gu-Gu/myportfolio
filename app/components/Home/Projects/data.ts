@@ -5,7 +5,7 @@ export const projectsData = [
     type: "Application",
     color: "bg-[#efcfe3]",
     videoUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/matesat_720p.webm?alt=media&token=2c8269b5-7d16-4971-ac19-6bc991d8d889",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/Animated-smartphones_-slider-%5Bremix%5D%20(1).webm?alt=media&token=e0d886eb-9b55-44bc-a1d4-e9b75af0c127",
   },
 
   {
@@ -24,14 +24,14 @@ export const projectsData = [
     videoUrl:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/New-file.webm?alt=media&token=660307a5-9520-44c8-ab2e-ee338f1d73cc",
   },
-  {
-    id: "02",
-    title: "The Estate",
-    type: "Application",
-    color: "bg-[#9d4edd]",
-    videoUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/theestate_720p.mp4?alt=media&token=b95e7e49-f15c-490f-aaa8-d3b0e8895247",
-  },
+  // {
+  //   id: "02",
+  //   title: "The Estate",
+  //   type: "Application",
+  //   color: "bg-[#9d4edd]",
+  //   videoUrl:
+  //     "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/theestate_720p.mp4?alt=media&token=b95e7e49-f15c-490f-aaa8-d3b0e8895247",
+  // },
   {
     id: "05",
     type: "Website",
@@ -48,12 +48,12 @@ export const projectsData = [
     videoUrl:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/spaceLanding720p.mp4?alt=media&token=7fbf5ada-3fcd-49f2-a9be-d9910413a7ac",
   },
-  {
-    id: "07",
-    type: "Application",
-    title: "Text Repeater",
-    color: "bg-[#00b4d8]",
-    videoUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/Showreel_-Mobile-screens-%5Bremix%5D.webm?alt=media&token=69e84f00-3bc4-45f4-9707-6821ac4ea360",
-  },
+  // {
+  //   id: "07",
+  //   type: "Application",
+  //   title: "Text Repeater",
+  //   color: "bg-[#00b4d8]",
+  //   videoUrl:
+  //     "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/Showreel_-Mobile-screens-%5Bremix%5D.webm?alt=media&token=69e84f00-3bc4-45f4-9707-6821ac4ea360",
+  // },
 ];
