@@ -43,11 +43,11 @@ const ModelViewer = () => {
     });
     const plate = new THREE.Mesh(plateGeo, plateMaterial);
 
-    scene.add(plate);
     plate.position.y = -0.02;
     plate.rotation.x = -Math.PI / 2;
     // plate.castShadow = true;
     plate.receiveShadow = true;
+
     const loader = new GLTFLoader();
     loader.load(
       "./character.glb",
@@ -86,6 +86,7 @@ const ModelViewer = () => {
         console.error(error);
       }
     );
+    scene.add(plate);
 
     const animate = () => {
       animationFrameId.current = requestAnimationFrame(animate);

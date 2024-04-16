@@ -11,7 +11,7 @@ const GoBack = () => {
   return (
     <div
       onClick={() => handleClick()}
-      className="py-3 px-10 bg-black text-white inline cursor-pointer mb-10 "
+      className="py-3 px-10 h-[50px] bg-black text-white inline cursor-pointer mb-10 "
     >
       GoBack
     </div>

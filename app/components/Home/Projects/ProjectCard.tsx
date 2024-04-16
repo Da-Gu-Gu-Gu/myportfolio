@@ -14,7 +14,7 @@ export interface Project {
 
 const ProjectCard = ({ project }: Project) => {
   return (
-    <Link href={"/project/1"}>
+    <Link href={`/project/${project.id}`}>
       <div
         className={`rounded-xl h-full w-full ursor-pointer p-5 pb-0 md:pb-0  md:p-7 text-black ${project.color}`}
       >

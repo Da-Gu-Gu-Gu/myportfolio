@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-import Loading from "./loading";
 import Hero from "./components/Home/Hero";
 import Contact from "./components/Home/Contact";
 import Skill from "./components/Home/Skill";
