@@ -34,7 +34,7 @@ export const projectsData = [
   {
     id: "5",
     type: "Website",
-    title: "Rock Paper Stone",
+    title: "Rock Paper Scissor",
     color: "bg-[#ff7900]",
     videoUrl:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/New-file%20(1).webm?alt=media&token=2daefd69-015d-4371-b3fe-0a477e1cf8ae",

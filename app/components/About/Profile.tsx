@@ -16,9 +16,9 @@ const Profile = () => {
   return (
     <div className="flex flex-col gap-7 pb-10">
       <div className="flex gap-5 items-center  ">
-        <div className="relative w-[90px] h-[90px] md:w-[120px] md:h-[120px] border border-black rounded-full">
+        <div className="relative w-[90px] overflow-hidden h-[90px] md:w-[120px] md:h-[120px] border border-gray-600 rounded-full">
           <Image
-            src="./vercel.svg"
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-96911.appspot.com/o/121556134_790489438193835_5146308733443650779_n.jpg?alt=media&token=10bdae2e-eedc-4f08-8d01-ef07ae8d953c"
             fill={true}
             alt=""
             className="w-full h-full object-center"

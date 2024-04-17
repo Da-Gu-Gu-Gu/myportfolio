@@ -16,7 +16,7 @@ const Detail = () => {
     <div className="w-full  lg:w-[70vw] mx-auto px-5  my-10 ">
       <div className="flex justify-between gap-5 items-center">
         <div
-          className={`h-[75px] w-[75px] md:w-[100px] md:h-[100px]  rounded-lg relative shadow-[0px_16px_30px_0px_${data.colorCode}]`}
+          className={`h-[75px] w-[75px] md:w-[100px] md:h-[100px]  rounded-lg relative ${data.colorCode}`}
         >
           <Image
             src={data.img}
