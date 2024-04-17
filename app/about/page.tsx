@@ -8,7 +8,7 @@ const page = () => {
     <>
       <GoBack />
       <div className=" overflow-hidden ">
-        <div className="bg-white">
+        <div className="  my-5">
           <ModelViewer />
         </div>
         <div className="w-[90vw] lg:w-[40vw] mx-auto">

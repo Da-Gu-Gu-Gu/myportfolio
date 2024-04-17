@@ -8,20 +8,22 @@ import Image from "next/image";
 import { projects } from "@/app/project/[id]/data";
 const Detail = () => {
   const { id } = useParams();
-  const data = projects[Number(id)];
+  const data = projects[Number(id) - 1];
 
   if (!data) return <div>Not Found</div>;
 
   return (
     <div className="w-full  lg:w-[70vw] mx-auto px-5  my-10 ">
       <div className="flex justify-between gap-5 items-center">
-        <div className="h-[75px] w-[75px] md:w-[100px] md:h-[100px]  rounded-lg relative shadow-[0px_16px_30px_0px_#004770]">
+        <div
+          className={`h-[75px] w-[75px] md:w-[100px] md:h-[100px]  rounded-lg relative shadow-[0px_16px_30px_0px_${data.colorCode}]`}
+        >
           <Image
             src={data.img}
             className="rounded-lg "
             fill
             sizes="100%"
-            style={{ objectFit: "cover" }}
+            // style={{ objectFit: "cover" }}
             alt="profile"
           />
         </div>
@@ -58,7 +60,7 @@ const Detail = () => {
         {/* <ImageSlider /> */}
         <div className="">
           <h2 className="text-lg">Tech Stack</h2>
-          <TechStack />
+          <TechStack stacks={data.techStack} />
         </div>
         <div className=" px-3  py-5 md:p-5 rounded-lg">
           <h2 className="font-semibold text-lg">Problem</h2>
