@@ -61,7 +61,7 @@ const Cube = ({ light }: { light: string }) => {
     scene.add(pointLight2);
     scene.add(pointLight1);
     scene.add(pointLight3);
-    console.log(scene);
+    // console.log(scene);
 
     const ambientLight = new THREE.AmbientLight(0xffffff); // Adjust intensity as needed
     scene.add(ambientLight);

@@ -23,12 +23,8 @@ const ProjectCard = ({ project }: Project) => {
           <div className="flex gap-3 text-xl">View</div>
         </div>
         <div className="w-full mt-5 md:mt-7 flex-grow h-[300px] md:h-[350px] lg:h-full rounded-t-xl overflow-hidden  ">
-          <video className="w-full h-full object-cover " loop autoPlay muted>
-            <source
-              src={project.videoUrl}
-              type="video/mp4"
-              className="w-full h-full object-cover"
-            />
+          <video className="w-full h-full object-cover" loop autoPlay muted>
+            <source src={project.videoUrl} type="video/mp4" />
           </video>
         </div>
       </div>
