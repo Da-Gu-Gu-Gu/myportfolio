@@ -8,7 +8,10 @@ const Menu = ({ onClose }: any) => {
     { title: "Home", url: "/" },
     { title: "About Me", url: "/about" },
     { title: "Projects", url: "/#projects" },
-    { title: "Resume", url: "" },
+    {
+      title: "Resume",
+      url: "https://drive.google.com/file/d/1ZluTZRJI1mH3yhJGy4AVJCn13OAwCW2-/view?usp=sharing",
+    },
   ];
 
   useEffect(() => {

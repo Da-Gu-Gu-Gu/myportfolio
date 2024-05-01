@@ -40,7 +40,7 @@ const Profile = () => {
         </div>
         <div className="text-center">
           <h1 className="font-semibold">Bangkok</h1>
-          <p className="text-gray-800">Base</p>
+          <p className="text-gray-800">Based</p>
         </div>
       </div>
       <div className=" rounded ">
