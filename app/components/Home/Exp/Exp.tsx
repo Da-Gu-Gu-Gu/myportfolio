@@ -6,7 +6,7 @@ const Exp = () => {
     {
       title: "Frontend Developer",
       com: "Piti.app",
-      date: "February 2024 - March 2024",
+      date: "February 2024 - Nov 2024",
       type: "On-Site",
       id: "exp1",
     },
